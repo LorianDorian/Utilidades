@@ -63,12 +63,24 @@ namespace Utilidades
             return resultado; 
         } 
 
-        public static int Division(float divisor, float dividendo)
+        public static float Division(float divisor, float dividendo)
         {
             if (divisor == 0)
             {
                 throw new ArgumentException("El divisor debe ser un numero diferente de 0");
             }
+
+            float resultado = 0;
+
+            try
+            {
+                resultado = dividendo / divisor;
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("Error de desbordamiento: " + ex.Message);
+            }
+            return resultado;
         }
     }
 }
