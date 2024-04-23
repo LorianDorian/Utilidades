@@ -12,7 +12,7 @@ namespace Utilidades
 {
     public class Objetos
     {
-        public static string SerializeObject<T>(T objectToSerialize)
+        public static string SerializeObjectXML<T>(T objectToSerialize)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             StringWriter writer = new StringWriter();
@@ -20,9 +20,9 @@ namespace Utilidades
             return writer.ToString();
         }
 
-        public static string SerializeObject(object obj)
+        public static string SerializeToJson(object obj)
         {
-            return Serialize(obj);
+            return JsonSerializer.Serialize(obj);
         }
 
         public static byte[] SerializeToBinary(object obj)
@@ -35,6 +35,23 @@ namespace Utilidades
             }
         }
 
+        public static T DeserializeFromXml<T>(string xml)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            using (StringReader reader = new StringReader(xml))
+            {
+                return (T)serializer.Deserialize(reader);
+            }
+        }
+
+        public static object DeserializeFromBinary(byte[] data)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (MemoryStream stream = new MemoryStream(data))
+            {
+                return formatter.Deserialize(stream);
+            }
+        }
 
     }
 }
