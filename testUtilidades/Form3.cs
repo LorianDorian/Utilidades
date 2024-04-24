@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace testUtilidades
 {
@@ -15,6 +16,16 @@ namespace testUtilidades
         public Form3()
         {
             InitializeComponent();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox4.Text = Cadenas.Reemplazo(richTextBox2.Text, richTextBox3.Text, richTextBox1.Text);
         }
     }
 }

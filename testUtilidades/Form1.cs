@@ -26,13 +26,13 @@ namespace testUtilidades
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 FormColecciones = new Form3();
+            Form4 FormColecciones = new Form4();
             FormColecciones.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 FormCadenas = new Form4();
+            Form3 FormCadenas = new Form3();
             FormCadenas.ShowDialog();
         }
 
