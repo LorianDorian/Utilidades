@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace testUtilidades
 {
@@ -15,6 +16,11 @@ namespace testUtilidades
         public Form8()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = Codificacion.AtbashEncrypt(richTextBox1.Text);
         }
     }
 }

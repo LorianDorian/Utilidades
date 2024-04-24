@@ -38,11 +38,12 @@ namespace Utilidades
             return (float)seed / 0x7FFFFFFF;
         }
 
-        public static int RandomNumberCustomSeed(int seed)
+        public static float RandomNumberCustomSeed(int seed)
         {
-            int semilla = (seed * 1103515245 + 12345) & 0x7FFFFFFF;
-            double normalized = (double)seed / 0x7FFFFFFF;
-            return (int)normalized;
+            float rand = RandomFloat();
+            float semilla = (seed * 1103515245 + 12345) & 0x7FFFFFFF;
+            double normalized = (double)semilla / rand;
+            return (float)normalized;
         }
     }
 }

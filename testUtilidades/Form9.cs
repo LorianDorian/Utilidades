@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace testUtilidades
 {
@@ -15,6 +16,11 @@ namespace testUtilidades
         public Form9()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = Matematicas.Potencia(Int32.Parse(textBox1.Text), Int32.Parse(textBox2.Text)).ToString();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace testUtilidades
 {
@@ -15,6 +16,21 @@ namespace testUtilidades
         public Form10()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label3.Text = NumAleatorios.RandomNumberCustomSeed(Int32.Parse(textBox1.Text)).ToString();
         }
     }
 }

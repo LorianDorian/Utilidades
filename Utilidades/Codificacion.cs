@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Utilidades
 {
-    internal class Hash
+    public class Codificacion
     {
         private static byte[] key = Encoding.UTF8.GetBytes("16ByteKeyForAES_"); // 16-byte key for AES encryption
         private static byte[] iv = Encoding.UTF8.GetBytes("16ByteIVForAES__"); // 16-byte initialization vector for AES encryption

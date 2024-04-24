@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace testUtilidades
 {
@@ -15,6 +16,13 @@ namespace testUtilidades
         public Form11()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string input = textBox1.Text;
+            string serialized = Objetos.SerializeObjectXML(input);
+            MessageBox.Show(serialized, "Serialized Object");
         }
     }
 }

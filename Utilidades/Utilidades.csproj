@@ -76,7 +76,7 @@
     <Compile Include="ConversionTipos.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="Fechas.cs" />
-    <Compile Include="Hash.cs" />
+    <Compile Include="Codificacion.cs" />
     <Compile Include="Matematicas.cs" />
     <Compile Include="NumAleatorios.cs" />
     <Compile Include="Objetos.cs" />

@@ -74,7 +74,7 @@ namespace testUtilidades
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Form10 FormObjetos = new Form10();
+            Form11 FormObjetos = new Form11();
             FormObjetos.ShowDialog();
         }
     }
