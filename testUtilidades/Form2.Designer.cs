@@ -46,6 +46,7 @@
             this.label1.Size = new System.Drawing.Size(258, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Crea un archivo .txt";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -53,6 +54,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(389, 22);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -62,6 +64,7 @@
             this.label2.Size = new System.Drawing.Size(340, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Escribe la direccion deseada con el nombre del archivo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -71,6 +74,7 @@
             this.label3.Size = new System.Drawing.Size(198, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Escribe el contenido del archivo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // richTextBox1
             // 
@@ -79,6 +83,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(389, 111);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button1
             // 

@@ -11,7 +11,7 @@ namespace Utilidades
     public class Colecciones
     {
 
-        public static void BubbleSort(int[] arr)
+        public static float[] BubbleSort(float[] arr)
         {
             int n = arr.Length;
             for (int i = 0; i < n - 1; i++)
@@ -21,12 +21,14 @@ namespace Utilidades
                     if (arr[j] > arr[j + 1])
                     {
                         // Swap arr[j] and arr[j+1]
-                        int temp = arr[j];
+                        float temp = arr[j];
                         arr[j] = arr[j + 1];
                         arr[j + 1] = temp;
                     }
                 }
             }
+
+            return arr;
 
         }
 
@@ -75,5 +77,7 @@ namespace Utilidades
             }
             return -1;
         }
+
+
     }
 }
